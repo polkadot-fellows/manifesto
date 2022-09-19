@@ -94,7 +94,7 @@ For Membership/Promotion/Continuation Votes, a particular Rank is required for v
 
 This is the beginning rank and indicates someone new to the Polkadot protocol and codebases, but who have taken a first concrete step through placing a membership deposit and finding a sponsor.
 
-Candiates may be of many levels prior to promotion to rank 1 and through a secondary system these levels may even be codified and properly recognised on-chain.
+Candidates may be of many levels prior to promotion to rank 1 and through a secondary system these levels may even be codified and properly recognised on-chain.
 
 ### `I Dan`: Humble Member
 
