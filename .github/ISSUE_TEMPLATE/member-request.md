@@ -15,5 +15,5 @@ Please ensure:
 Please replace the "___" with your information:
 - I expect my rank is at least ___ and at most ___.
 - I have been substantially involved with the Polkadot core technology set for ___ years.
-- My biggest PR to a Polkadot core repository is: ___
+- My most substantial PR to a Polkadot core repository is: ___
 - My earliest non-trivial PR to a Polkadot core repository is: ___
