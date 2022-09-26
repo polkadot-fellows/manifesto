@@ -24,7 +24,7 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \unitlength=1mm
-\definecolor{purple}{rgb}{0.97,0.93,0.99}
+\definecolor{purple}{rgb}{0.94,0.93,0.99}
 \definecolor{lightyellow}{rgb}{1,0.99,0.95}
 \usetikzlibrary{decorations.markings,calc}
 
@@ -39,19 +39,19 @@
 \def\Totx{55}   %% adjust
 \def\Offy{0.6}
 \def\Dotcolor{white}
-%\pagecolor{purple}
+\pagecolor{purple}
 
 \newsavebox{\mybox}
 \sbox{\mybox}{
   \begin{tikzpicture}[remember picture]
-%    \foreach \y in {1,2,...,\Toty}{
-%      \foreach \x in {2,4,...,\Totx}{
-%        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Stepy*\y cm)}] (0,) circle[radius=\Size];
-%      }
-%      \foreach \x in {1,3,...,\Totx}{
-%        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Offy cm+\Stepy*\y cm)}] (0,) circle[radius=\Size];
-%      }
-%    }
+    \foreach \y in {1,2,...,\Toty}{
+      \foreach \x in {2,4,...,\Totx}{
+        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Stepy*\y cm)}] (0,) circle[radius=\Size];
+      }
+      \foreach \x in {1,3,...,\Totx}{
+        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Offy cm+\Stepy*\y cm)}] (0,) circle[radius=\Size];
+      }
+    }
   \end{tikzpicture}
 }
 
