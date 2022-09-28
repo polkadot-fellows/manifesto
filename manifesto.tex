@@ -39,19 +39,19 @@
 \def\Totx{55}   %% adjust
 \def\Offy{0.6}
 \def\Dotcolor{white}
-\pagecolor{purple}
+%\pagecolor{purple}
 
 \newsavebox{\mybox}
 \sbox{\mybox}{
   \begin{tikzpicture}[remember picture]
-    \foreach \y in {1,2,...,\Toty}{
-      \foreach \x in {2,4,...,\Totx}{
-        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Stepy*\y cm)}] (0,) circle[radius=\Size];
-      }
-      \foreach \x in {1,3,...,\Totx}{
-        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Offy cm+\Stepy*\y cm)}] (0,) circle[radius=\Size];
-      }
-    }
+%    \foreach \y in {1,2,...,\Toty}{
+%      \foreach \x in {2,4,...,\Totx}{
+%        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Stepy*\y cm)}] (0,) circle[radius=\Size];
+%      }
+%      \foreach \x in {1,3,...,\Totx}{
+%        \fill[\Dotcolor,shift={(\Stepx*\x cm,\Offy cm+\Stepy*\y cm)}] (0,) circle[radius=\Size];
+%      }
+%    }
   \end{tikzpicture}
 }
 
@@ -77,7 +77,7 @@
 
 \newcommand{\itemhook}{\setlength{\topsep}{0pt}  \setlength{\itemsep}{0pt}\setlength{\leftmargin}{15pt}}
 
-\title{Polkadot Fellowship Manifesto \\ {\smaller \textbf{Draft 1}}}
+\title{Polkadot Fellowship Manifesto \\ {\smaller \textbf{Draft 2}}}
 \author{ Dr. Gavin Wood\\ gavin@polkadot.io}
 
 \begin{document}
@@ -153,9 +153,9 @@ The Fellowship can be seen as a political collective in that it has an on-chain 
 
 \subsection{Rank}
 
-Politically, the Fellowship aims to be a source of technical expertise and leadership. The members are able to manifest their voice logically and, in protocol terms, exist as an \textbf{origin of action} on-chain. However, it is important to note that this has no specific ramifications in controlling the course of the Polkadot protocol. What specific power the collective has within the protocol is granted to it and held in check by other, generally much more inclusive governance apparatus such as referenda.
+Politically, the Fellowship aims to be a source of expertise and leadership over the technology required in the ongoing maintenance and development of the Polkadot (Main) Network. The members are able to manifest their voice logically and, in protocol terms, exist as an \textbf{origin of action} on-chain. However, it is important to note that this has no specific ramifications in controlling the course of the Polkadot protocol. What specific power the collective has within the protocol is granted to it and held in check by other, generally much more inclusive governance apparatus such as referenda.
 
-The Fellowship aims to ensure a balance between cultivating, empowering and utilising technical merit relevant to the protocol. In all these aspects it is important for the Fellowship to both identify those individuals who have merit and to quantify that merit. Thus the Fellowship is embodied through an on-chain data-structure (somewhat similar to smart-contract) which retains a list of members together with a rank, a scalar value in which the Fellowship approximates the individual's level of relevant expertise, talent and potential for contribution.
+The Fellowship aims to ensure a balance between cultivating, empowering and utilising technical merit relevant to the mainnet's protocol. In all these aspects it is important for the Fellowship to both identify those individuals who have merit and to quantify that merit. Thus the Fellowship is embodied through an on-chain data-structure (somewhat similar to smart-contract) which retains a list of members together with a rank, a scalar value in which the Fellowship approximates the individual's level of relevant expertise, talent and potential for contribution.
 
 \subsection{Forebears}
 
@@ -167,11 +167,55 @@ Aside from the on-chain element and its usage within an agile economic system, l
 
 While the need for, and broad intention of, the Fellowship is now clear it is important to define its specific goals. We can break these down into benefits, recognition and nurturing.
 
+\subsection{Audience and Non-Goals}
+
+The Polkadot Fellowship focusses on the sustenance and enrichment of technical expertise relied upon primarily by the Polkadot Main Network. Technologies specific to the core protocol and its practical realisations are explicitly covered. Technologies not specific to the core protocol are generally not covered. While members may engage in any number of activities beyond immediate technical work (designing, programming, debugging), the goal of the organisation is nonetheless that of building technical knowledge critical for the continued existance and evolution of the network protocol itself.
+
+The Fellowship thus aims to embody the expertise over protocol and code design which is utilised by any realisation of the Polkadot meta-protocol (\ie a node implementation), any realisation of the Polkadot runtime and any code or technology primarily utilised for the routine maintenance of the network and without which would reduce the network's potential to sustain itself.
+
+Pure research, education, public outreach, recruitment, management and mentorship may be incidental activites of some members but it must be understood that these should not constitute the primary contributions for a member to receive recognition. The Fellowship is intended to be only the first of its kind. Should the concept (probably after some iteration) become proven effective, we might reasonably expect more instances of expertise-based orgnaisation ``fellowships'' for other disciplines not covered by the present Fellowship.
+
+\subsubsection{Specifics}
+
+We may explicitly include expertise on the following code and technology:
+
+\begin{itemize}
+ \item the internals of the Parity Polkadot node implementation;
+ \item the internals of the the Smoldot (light) node implementation;
+ \item cryptographic data-structures, algorithms, languages and \textsc{api}s required for the continued upkeep of the Polkadot (Main) Network;
+ \item consensus algorithms concerning the Relay-chain (\textsc{babe} \& \textsc{grandpa});
+ \item trust-free bridges relying on said consensus algorithms (planned to be) utilised by system chains;
+ \item parachain consensus;
+ \item cross-chain message passing (\textsc{xcmp}, \textsc{hrmp}, \textsc{dmp} \& \textsc{ump});
+ \item the Polkadot libp2p-based peer networking protocol;
+ \item the Polkadot topology strategies;
+ \item chain synchronisation strategies utilised by Polkadot;
+ \item the Polkadot business-logic (aka the ``runtime'');
+ \item pallets utilised by the Polkadot (Main) Network and its system chains;
+ \item the internals of the \textsc{frame} pallet framework;
+ \item runtime and host \textsc{api}s;
+ \item the \textsc{xcm} specification and realisation;
+ \item standard \textsc{rpc}s; and
+ \item user-interface code required to practically execute upgrades to the Polkadot (Main) Network; and
+ \item code or technology required by, and utilised primarily for, any code or technology already included.
+\end{itemize}
+
+In short, if expertise or code is \emph{required} and \emph{primarily used} for the Polkadot (Main) Network to continue \emph{operating} and \emph{improving}, then it is covered. If it is not then it is not.
+
+Notable examples of technologies/code which are \emph{not} covered:
+
+\begin{itemize}
+  \item Rust language (required by realisations of the Polkadot Network, but not primarily used for them);
+  \item libp2p (required by the Polkadot Network but not primarily used for it);
+  \item `subxt` (useful tooling, but not required for Polkadot's continued operation);
+  \item `ink!' (useful tooling, but not required for Polkadot's continued operation);
+\end{itemize}
+
 \subsubsection{Benefits}
 
-This refers to might, in a more legacy context, be considered as the ``financial aspects'' of the organisation. Firstly, members of the Fellowship need to receive support to ensure that their short-term needs are met. If Members cannot afford the time, equipment, accomodation, sustinance, dependents, and leisure activities which life demands, then dedicating themselves to Polkadot becomes unsustainable or unrealistic.
+This refers to what might, in a more legacy context, be considered as the ``financial aspects'' of the organisation. Firstly, members of the Fellowship need to receive support to ensure that their short-term needs are met. If Members cannot afford the time, equipment, accomodation, sustinance, dependents, and leisure activities which life demands, then dedicating themselves to Polkadot becomes unsustainable or unrealistic.
 
-Secondly, it is important that Members feel that their fates is strongly linked to that of the Polkadot network if we are to expect a maximisation of potential. Put another way, we want to ensure that the long-term interests of Polkadot and the member are well-aligned. Thus effective long-term incentivisation acts as both a means of pushing the member to dedicate themselves, as well as an internal compass providing some common cause which can underpin ideological consensus.
+Secondly, it is important that Members feel that their fates are strongly linked to that of the Polkadot network if we are to expect a maximisation of potential. Put another way, we want to ensure that the long-term interests of the Polkadot Network and the individuals critical to its maintenance and development are well-aligned. Thus effective long-term incentivisation acts as both a means of pushing the member to dedicate themselves, as well as an internal compass providing some common cause which can underpin ideological consensus.
 
 \subsubsection{Recognition}
 
@@ -189,18 +233,6 @@ While ones rank of a discipline may be linear out of necessity, practitioners' j
 
 By way of example, martial artists progressing through their discipline will often find that the culture is designed to help guide their focus as their fitness, experience and age changes. Inexperienced and unfit practitioners may be pushed to attain high degrees of fitness and disciplined technique. Those with high levels of fitness and good technique may be pushed towards the sport side. Older practitioners may be directed more towards flexibility, mental focus and the underlying philospohy. Highly experienced practitioners may begin instructing all of the above. Practitioners who have demonstrated themselves at the top of their art may be encouraged to help lead the political organisation.
 
-\subsection{Audience and Non-Goals}
-
-The Polkadot Fellowship is intended to be only the first of its kind. It focusses on the sustenance and enrichment of technical expertise relevant to the Polkadot network primarily concerning the core protocol and its implementation. While members may engage in ae number of activities beyond immediate technical work (designing, programming, debugging), the goal of the organisation is nonetheless that of building technical knowledge for the protocol.
-
-Pure research, general education, public outreach, developer recruitment, management and mentorship may be incidental activites of some members but it must be understood that these should not constitute the primary contributions for a member to receive recognition. Should the concept (probably after some iteration) become proven effective, we might reasonably expect more instances of expertise-based orgnaisation ``fellowships'' for other disciplines not covered by the present Fellowship.
-
-For now, we explicitly include expertise surrounding parachain consensus, cross-chain message passing (\textsc{xcmp},  \textsc{hrmp}, \textsc{dmp} \& \textsc{ump}), consensus algorithms concerning the Relay-chain (\textsc{babe} \& \textsc{grandpa}) and any cryptographic data-structures, languages and \textsc{api}s specific to Polkadot.
-
-Secondly, we include the Polkadot node implementation including peer networking protocols, topology strategies, synchronisation strategies and the internals of complete node implementations.
-
-Thirdly, we include the Polkadot business-logic (aka the ``runtime''), including \textsc{frame} internals, runtime and host \textsc{api}s, pallets utilised by Polkadot and its system chains. Finally, we also cover expertise concerning \textsc{xcm}, \textsc{grandpa}-based bridges and standard \textsc{RPC}s.
-
 \section{Tenets}
 
 Members are expected to faithfully uphold the following tenets. Clarifications to the rules should be in agreement with these tenets. Acting in clear breach of these tenets may be considered by voters as grounds for non-promotion, demotion or, in extreme cases, exclusion from the Fellowship.
@@ -214,9 +246,9 @@ Members are expected to faithfully uphold the following tenets. Clarifications t
 
 \section{Operational Rules}\label{operational-rules}
 
-The operational rules of the organisation governing are detailed below. These rules specify the process for becoming a member and attaining a rank. During the initial bootstrapping phase, it may be reasonable to have shortened timelines in order to expediate decentralisation and ensure pluralism as early as possible in the member judgement process.
+The operational rules of the Fellowship governing how its membership evolves are detailed below. These rules specify the process for becoming a member, attaining and maintaining a rank. During the initial bootstrapping phase, it may be reasonable to have shortened timelines in order to expediate decentralisation and ensure pluralism as early as possible in the member judgement process.
 
-Note, as per the tenets, the voting of Memebrs is expected to follow the conventions and bylaws of the Fellowship, and in particular the Rank Specifications.
+Note, as per the tenets, the voting of Members is expected to follow the conventions and bylaws of the Fellowship, and in particular the Rank Specifications.
 
 \subsection{Entry}
 
@@ -265,13 +297,13 @@ Voting generally happens through cumulative Rank-Voting. This simply means that 
   w(r) = \begin{cases}
     0 & \text{when } r \leq 0 \\
     r + w(r - 1) & \text{otherwise} \\
-  \end{cases} 
+  \end{cases}
 \end{equation}
 
 For Membership/Promotion/Continuation Votes, a particular rank is required for voting. In this case, we formulate the rank-weighted vote by first reducing the rank such that $1$ is the lowest valid value. Formally:
 
 \begin{equation}
-  w'(r, m) = w(r - m + 1) 
+  w'(r, m) = w(r - m + 1)
 \end{equation}
 
 \subsection{Evaluation Considerations}
