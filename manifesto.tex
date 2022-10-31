@@ -77,15 +77,14 @@
 
 \newcommand{\itemhook}{\setlength{\topsep}{0pt}  \setlength{\itemsep}{0pt}\setlength{\leftmargin}{15pt}}
 
-\title{Polkadot Fellowship Manifesto \\ {\smaller \textbf{Draft 3}}}
+\title{Polkadot Fellowship Manifesto \\ {\smaller \textbf{Draft 4}}}
 \author{ Dr. Gavin Wood\\ gavin@polkadot.io}
 
 \begin{document}
 
 \begin{abstract}
 
-The Polkadot Fellowship is a rules-based ranked-membership organisation administered and empowered
-through blockchain logic hosted on the Polkadot Network. In this paper, the goals of the organisation are discussed, as is the background of its creation. Its bylaws and membership rules are specified and relevant conventions described.
+The Polkadot Fellowship is a rules-based ranked-membership organisation administered and empowered through blockchain logic hosted on the Polkadot Network. In this paper, the goals of the organisation are discussed, as is the background of its creation. Its bylaws and membership rules are specified and relevant conventions described.
 
 \end{abstract}
 
@@ -105,7 +104,7 @@ Public blockchain systems utilize decentralisation to a greater or lesser extent
 
 However, the actual level of decentralisation of public blockchain systems, even those which boast highly pluralistic groups of their network's node operators, is in fact quite minimal and generally undermined by centralising factors elsewhere in the ``social stack''. A recent study \cite{sultanik2022blockchains}, showed that the service guarantees of most major networks could be compromised by at most a handful of people. I would posit that this is for three main reasons. Firstly, and most often discussed, is that the portion of power given to the individual actors who operate nodes and maintain the network is highly non-uniform. While no individual operator may be able to dictate consensus unilaterally (and thus break the network at will or through negligence), some very small subgroups are able to bend or break the rules amongst themselves. For the Bitcoin network, the number of individual economic actors required to execute a ``double-spend'' attack (whereby a confirmed transaction is reverted and another takes its place) varies in the single digits but has been as low as two on occasion.
 
-Secondly, as pointed out by Moxie Marlinspike recently \cite{marlinspike2022my}, major networks almost universally fail at facilitating decentralised usage of their service to their users. In order to gain the guarantees offered by the decentralised service, it is generally required to participate on the network directly by running the node software. This usually requires large amounts of time, a reliable, high-speed internet connection, plenty of storage and the installation of specialist software. Almost all real users are unable to do this and instead simply trust a centralised intermediary which relays information to and from the network.\footnote{Polkadot is actually far ahead of the pack on this, and can provide its service securely to users both in-browser or on mobile without the need for such an intermediary.} A notable example of this is the Infura infrastructure of Ethereum which is used by default in Metamask, the predominant way of accessing Ethereum-based applications. This reduces the practical factor of decentralisation for most network users to approximately that of a traditionally centralised service.
+Secondly, as pointed out by Moxie Marlinspike recently \cite{marlinspike2022my}, major networks almost universally fail at facilitating decentralised usage of their service to their users. In order to gain the guarantees offered by the decentralised service, it is generally required to participate on the network directly by running the node software. This usually requires large amounts of time, a reliable, high-speed internet connection, plenty of storage and the installation of specialist software. Almost all real users are unable to do this and instead simply trust a centralised intermediary which relays information to and from the network.\footnote{Polkadot is actually far ahead of the pack on this, and can provide its service securely to users both in-browser or on mobile without the need for such an intermediary.} A notable example of this is the Infura infrastructure of Ethereum which is used by default in Metamask, the predominant way of accessing Ethereum-based applications with some analysis suggesting as much as 70\% of all transactions on the ``decentralised'' network being made through this single provider. This reduces the practical factor of decentralisation for most network users to approximately that of a traditionally centralised service.
 
 Thirdly, finally and most importantly for the present work is the practical means by which node operators fulfil their role. It must be understood that blockchains are inhererntly software systems: operating a node on the network involves securely running a piece of software on a machine able to correctly operate according to the network's protocol. We generally call this piece of software the ``blockchain client'' or the ``node software''. Node operators make a decision to run this software and must manually select the software to download and need to decide when and whether to apply updates to it. Most node operators are uninterested in arcane protocol discussions and defer to very basic social cues in their decision. This leads to a silent and hithertoo little-explored centralisation risk for the network. And, unlike the first two points which can arguably be solved purely through mathematics and technology, I posit that this is instead a more entrenched social issue and as such a harder problem to solve. To understand the centralisation risk, it is crucial to understand the factors by which node operators select \emph{which} software to use, and \emph{whether} they should apply some upgrade. If these factors lead to the possibility of a small, well-aligned group of people able to widely deploy changes to the protocol, then it can gravely undermine the protocol and its guarantees.
 
@@ -147,13 +146,13 @@ One of the most pressing areas (if not the most pressing) undermining blockchain
 
 Thus, in order to avoid falling pray to these arbitrary and trivial social factors which open the protocol up to fundamentally centralising forces, we must take explicit action. The Polkadot Fellowship aims to be one example of such an explicit action. The Fellowship is a rules-based social organisation with several aims centred around the support and recognition of the technical expertise needed for technical stability, security and progress of the network.
 
-The Fellowship can be seen as a political collective in that it has an on-chain voice controlled purely by its members. It can also be seen as an incentivisation mechanism to help induct and retain expertise and talent important for the network. Finally, it can be seen as a vessel to help guide and support the personal development and maximise every individual's potential to contribute. Taken together, it helps ensure a continued pool of protocol expertise and plugs any power-vacuum which would otherwise be filled by \emph{the papal model} or some legacy off-chain enterprise.
+The Fellowship can be seen as a political collective in that it has an on-chain voice controlled purely by its members according to some algorithm. It can also be seen as an incentivisation mechanism to help induct and retain expertise and talent important for the network. Finally, it can be seen as a vessel to help guide and support the personal development and maximise every individual's potential to contribute. Taken together, it helps ensure a continued pool of protocol expertise and plugs any power-vacuum which would otherwise be filled by \emph{the papal model} or some legacy off-chain enterprise.
 
 %Thus on the first point it functions as a means of \emph{empowering} its members. On the second point is functions as a means of \emph{engaging} and \emph{applying} its members.
 
 \subsection{Rank}
 
-Politically, the Fellowship aims to be a source of expertise and leadership over the technology required in the ongoing maintenance and development of the Polkadot (Main) Network. The members are able to manifest their voice logically and, in protocol terms, exist as an \textbf{origin of action} on-chain. However, it is important to note that this has no specific ramifications in controlling the course of the Polkadot protocol. What specific power the collective has within the protocol is granted to it and held in check by other, generally much more inclusive governance apparatus such as referenda.
+Politically, the Fellowship aims to be a source of expertise and leadership over the technology required in the ongoing maintenance and development of the Polkadot (Main) Network. The members are able to manifest their voice logically and, in protocol terms, exist as an \textbf{origin of action} on-chain. However, it is important to note that this has no specific ramifications in controlling the course of the Polkadot protocol. What specific power the collective has within the protocol is granted to it and held in check by other, generally much more inclusive governance apparati such as referenda.
 
 The Fellowship aims to ensure a balance between cultivating, empowering and utilising technical merit relevant to the mainnet's protocol. In all these aspects it is important for the Fellowship to both identify those individuals who have merit and to quantify that merit. Thus the Fellowship is embodied through an on-chain data-structure (somewhat similar to smart-contract) which retains a list of members together with a rank, a scalar value in which the Fellowship approximates the individual's level of relevant expertise, talent and potential for contribution.
 
@@ -169,13 +168,13 @@ While the need for, and broad intention of, the Fellowship is now clear it is im
 
 The Polkadot Fellowship focusses on the sustenance and enrichment of technical expertise relied upon primarily by the Polkadot Main Network. Technologies specific to the core protocol and its practical realisations are explicitly covered. Technologies not specific to the core protocol are generally not covered. While members may engage in any number of activities beyond immediate technical work (designing, programming, debugging), the goal of the organisation is nonetheless that of building technical knowledge critical for the continued existance and evolution of the network protocol itself.
 
-The Fellowship thus aims to embody the expertise over protocol and code design which is utilised by any realisation of the Polkadot meta-protocol (\ie a node implementation), any realisation of the Polkadot runtime and any code or technology primarily utilised for the routine maintenance of the network and without which would seriously inhibit the network's potential to sustain itself.
+The Fellowship thus aims to embody the expertise over the protocol, its formalisation and design which is utilised by any realisation of the Polkadot meta-protocol (\ie a node implementation), as well as any specific realisation of the Polkadot runtime and any code or technology primarily utilised for the routine maintenance of the network and without which would seriously inhibit the network's potential to sustain itself.
 
 Pure research, education, public outreach, recruitment, management and mentorship may be incidental activites of some members but it must be understood that these should not constitute the primary contributions for a member to receive recognition. The Fellowship is intended to be only the first of its kind. Should the concept (probably after some iteration) become proven effective, we might reasonably expect more instances of expertise-based orgnaisation ``fellowships'' for other disciplines not covered by the present Fellowship.
 
 \subsubsection{Specifics}
 
-Based on the above, we may conclude that expertise on the following code and technology would be considered a goal of the Fellowship:
+Based on the above, we may conclude that expertise on the following technology and its strict description(s) and/or implementation(s) would be considered a goal of the Fellowship:
 
 \begin{itemize}
  \item the internals of all functional Polkadot node implementations;
@@ -197,7 +196,7 @@ Based on the above, we may conclude that expertise on the following code and tec
  \item code or technology required by, and utilised primarily for, any code or technology already included.
 \end{itemize}
 
-In short, if expertise or code is \emph{required} and \emph{primarily used} for the Polkadot (Main) Network to continue \emph{operating} and \emph{improving}, then it is covered. If it is not then it is not.
+In short, if expertise on a technology (or a specific implementation of it) is \emph{required} and \emph{primarily used} for the Polkadot (Main) Network to continue \emph{operating} and \emph{improving}, then it is covered. If it is not then it is not.
 
 Notable examples of technologies/code which are \emph{not} covered:
 
@@ -208,9 +207,11 @@ Notable examples of technologies/code which are \emph{not} covered:
   \item `ink!' (useful tooling, but not required for Polkadot's continued operation).
 \end{itemize}
 
+Since the Fellowship is about retaining protocol \textit{expertise}, it is not exclusive to developers, but also to ideators, designers, formalisers and research analysts. That said, machine-executable implementations do constitute an absolute requirement of the network's continued existence and thus it may not be unreasonable to expect an outsized proportion of implementors within the Fellowship.
+
 \subsubsection{Benefits}
 
-This refers to what might, in a more legacy context, be considered as the ``financial aspects'' of the organisation. Firstly, members of the Fellowship need to receive support to ensure that their short-term needs are met. If Members cannot afford the time, equipment, accomodation, sustinance, dependents, and leisure activities which life demands, then dedicating themselves to Polkadot becomes unsustainable or unrealistic.
+This refers to what might, in a more legacy context, be considered as the ``material aspects'' of the organisation. Firstly, members of the Fellowship need to receive support to ensure that their short-term needs are met. If Members cannot afford the time, equipment, accomodation, sustinance, dependents, and leisure activities which life demands, then dedicating themselves to Polkadot becomes unsustainable or unrealistic.
 
 Secondly, it is important that Members feel that their fates are strongly linked to that of the Polkadot network if we are to expect a maximisation of potential. Put another way, we want to ensure that the long-term interests of the Polkadot Network and the individuals critical to its maintenance and development are well-aligned. Thus effective long-term incentivisation acts as both a means of pushing the member to dedicate themselves, as well as an internal compass providing some common cause which can underpin ideological alignment.
 
@@ -367,7 +368,7 @@ Finally, all voting is expected to follow the Operational Rules and Rank Specifi
 
 \subsection{Notes}\label{notes}
 
-Ideally, all voting is commit-reveal. However in the interests of expediance an initial implementation may be public.
+Ideally, all voting is commit-reveal. However in the interests of expediency an initial implementation may be public.
 
 \section{Rank Summary}\label{rank-summary}
 
@@ -445,15 +446,26 @@ The (potentially) softest of the materials, symbolising the beginning of the jou
 
 The primary qualities which should be present and clear in those being given the rank are aspiration, knowledge-discovery, knowledge-sharing and active maintenance. They should demonstrate commitment to the protocol's development through mastery of at least one major component as well as having a broad understanding across the protocol. They will demonstrate commitment to pooling and sharing protocol knowledge through establishing a pattern of availability or communication in one or more online media; forums, chatrooms, issue trackers or Q\&A sites. A pattern of general availability on synchronous communication media would also count in the individual's favour and demonstrate a commitment to the network maintenance. The candidate should have a rudimentry awareness of, and ability to be educated on, overall priorities and tradeoffs in development \& design of a global, decentralised and unstoppable network, including centralisation risks, non-jurisdictionality, privacy, automation \& maintenance vs autonomisation \& ownerlessness.
 
-The Candidate must clearly demonstrate an independence of mind and spirit. They should be able to work alone and without direction, to investigate and problem-solve without need for assistance and to be responsible for the design, implementation and/or continued maintenance of a Polkadot component or sub-system which could reasonably be considered important for the continued health and operation of the Polkadot network. The Candidate should have made three clear demonstrations of protocol expertise. Possible examples of this may be: identifying and fixing a non-trivial protocol issue; being available and playing a crucial operational role for a network fix; proposing a reasonable and non-trivial protocol innovation; or doing a valuable, innovative and insightful refactoring or alteration.
+The Candidate must clearly demonstrate an independence of mind and spirit. They should be able to work alone and without direction, to investigate and problem-solve without need for assistance and to be responsible for the design, implementation and/or continued maintenance of a Polkadot component or sub-system which could reasonably be considered important for the continued health and operation of the Polkadot network. The Candidate should be making clear demonstrations of protocol expertise.
 
 There is no specific time which must have passed with Polkadot being the individual's primary life-focus prior to attaining this rank, though a reasonable expectation would be that they have been working on core Polkadot technology continuously for around 12 months.
 
-\subsubsection{Requirements}\label{requirements}
+\subsubsection{Requirements}\label{requirements-1}
 
 \begin{itemize}
-\item Primarily designed and implemented a minor or auxilliary component.
-\item Should be able to list all key goals/principles/tenets of project philosophy and how these relate to technology.
+\item Three clear examples of a modest but substantial contribution to protocol development.
+\item Actively been involved in the design of a component. The component should be either deployed into the protocol or reasonably intended for future deployment into protocol *and* at the standard expected of a PRP\footnote{internationally peer-reviewed publication}.
+\item Substantially assisted in the analysis, or authoring of formalisation or implementation of a protocol component. Formalisation should be at the standard expected of a peer-reviewed publication. Analysis should either lead to a change in the protocol or be at the standard expected of a PRP. Implementation should be in a functional implementation of the protocol.
+\item Should be able to list all key goals, principles and tenets of Polkadot's overall philosophy.
+\end{itemize}
+
+Possible examples of a ``modest but substantial contribution'' may be:
+
+\begin{itemize}
+\item identifying and correcting a non-trivial issue in protocol code or formalisation;
+\item being available and playing a crucial operational role for a network fix;
+\item proposing a reasonable and non-trivial protocol innovation; or
+\item doing a valuable, innovative and insightful refactoring or simplification.
 \end{itemize}
 
 \subsection{II Dan: Proficient Member}\label{ii-dan-proficient-member}~\\
@@ -470,10 +482,10 @@ A member at this rank should be a core part of the team. Clear demonstration of 
 
 It is generally expected that the participant will have been practicing Polkadot as their primary life-focus for at least \textbf{one} year, unbroken, after attaining the previous rank.
 
-\subsubsection{Requirements}\label{requirements-1}
+\subsubsection{Requirements}\label{requirements-2}
 
 \begin{itemize}
-\item Usefully assisted in implementing a major component from start to finish.
+\item Primary individual responsible for the formalisation, implementation or analytical improvement of a major component of the protocol. Formalisation, and analysis leading to any improvement, should be in a peer-reviewed publication (or there should be a good reason why not). Implementation should be subject to expert code-review and included in a functional implementation of the protocol.
 \item At least one published long-form semi-technical article concerning Polkadot.
 \end{itemize}
 
@@ -495,14 +507,14 @@ A Fellow must have a comprehensive knowledge of the overall priorities and trade
 
 It is generally expected that the participant will have been practicing Polkadot as their primary life-focus for at least \textbf{one} year, unbroken, after attaining the previous rank.
 
-\subsubsection{Requirements}\label{requirements-2}
+\subsubsection{Requirements}\label{requirements-3}
 
 \begin{itemize}
 \item \textbf{Promotion should involve an in-person grading during which superiors may invite the individual to answer specific questions concerning their contributions.}
-\item Defense should include a chat on the philosophic principles and their relation to the technology where they demonstrate expert knowledge confidently and betray no misinterpretations.
-\item At least three published long-form semi-technical articles concerning Polkadot.
-\item Played a primary role in implementing a major component from start to finish.
-\item At least one ecosystem presentation on Polkadot or some component of it.
+\item Defense should include a conversation on the philosophic principles and their relation to the technology where they demonstrate expert knowledge confidently and betray no misinterpretations. They should be able to confidently defend the existence of Polkadot, compared to other projects in the same industry as well as its wider place in society.
+\item Substantial presence in defending or advocating Polkadot outside of the ecosystem. This may take one of several forms: at least three published long-form semi-technical articles concerning Polkadot; substantial presence on social media used by other industry participants; presence within conferences or publications of a specific academic or industrial discipline.
+\item Demonstrable presence of knowledge sharing within the ecosystem. This may take several forms: an ecosystem presentation on Polkadot or some component of it; activity on the Polkadot community forum or chat channels; activity on Polkadot-related developer forums such as StackExchange. The medium is not important; the impact is everything.
+\item Either played a supporting role in the ideation and a primary role in the formalisation of a major protocol component; or played a supporting role in the code-design and a primary role in the implementation of a major protocol component. The formalisation should be included in a well-respected peer-reviewed publication or the design implemented and deployed into the protocol. The implementation should be subject to expert code-review and included in a functional implementation of the protocol.
 \end{itemize}
 
 \subsection{IV Dan: Architect}\label{iv-dan-architect}~\\
@@ -519,15 +531,15 @@ The materials are all of approximately the same hardness symbolising that all th
 
 The first, for the grade of 4th Dan is Obsidian. It is essentially volcanic glass, composed of silicon with other light elements and easily forms sharp edges. It has been used in tools since ancient times especially for creating cutting blades. The sharp blade symbolises the single-minded focus required by the individual in both becoming a subject matter expert and in inovation itself. It is very slightly softer than the other materials of the expert ranks reflecting that a deep level of expertise, while very important, is the junior of the three qualities.
 
-To attain this grade the candidate should be demonstrating a shift in their focus from the attainment of specific knowledge, comprehension and skills to the less knowledge-based and more creative elements of protocol development: design, invention, innovation and architecture. Rather than (just) plentiful incremental low-level improvements to the protocol, substantial valuable individual contributions to the (r)evolution of the protocol should have been demonstrated through the design, architecture and/or implementation of key future components which were (ultimately) found valuable by the Fellowship. Rather than comprehension, their ability to experiment, design and build new technology must be beyond question and their truly novel ideas and designs must be of a consistently high quality and at least occasionally beyond the imaginations of those with higher rank.
+To attain this grade the candidate should be demonstrating a shift in their focus from the attainment of specific knowledge, comprehension and skills to the less knowledge-based and more creative elements of protocol development: ideation, invention and innovation. Rather than (just) plentiful incremental low-level improvements to the protocol, substantial valuable individual contributions to the (r)evolution of the protocol should have been demonstrated through broad architectural work together with novel designs leading to formalisation and/or implementation of technology (ultimately) found valuable by the Fellowship. Rather than comprehension, their ability to experiment, design and build new technology must be beyond question and their truly novel ideas and designs must be of a consistently high quality and at least occasionally beyond the imaginations of those with higher rank.
 
 The participant will have been practicing Polkadot as their primary life-focus for at least \textbf{one} year, unbroken, after attaining the previous rank. However, this is only a bare minimum and should not be taken as a presupposition of the expected amount of time required. The candidate should be only be promoted to this grade once the time limit is over \emph{and} they have demonstrated the appropriate aptitude.
 
-\subsubsection{Requirements}\label{requirements-3}
+\subsubsection{Requirements}\label{requirements-4}
 
 \begin{itemize}
-\item Usefully assisted as part of the design of a major component.
-\item At least one non-ecosystem, non-private presentation on Polkadot. Would typically be industry-wide or academic.
+\item Either played a primary role in both the ideation and subsequent formalisation of a major protocol component; or played a primary role in the code-design and implementation of a major protocol component. The formalisation should be included in a well-respected peer-reviewed publication or the design implemented and deployed into the protocol. The implementation should be subject to expert code-review and included in a functional implementation of the protocol.
+\item Further presence of advocating or defending Polkadot outside of the ecosystem. A good benchmark would be one pre-advertised presentation on Polkadot to an industry-wide, academic or other such well-aligned audience outside of the ecosystem. It may also be fulfilled within other media of a similar weight (e.g. a professional journal, major news publication or academic article).
 \end{itemize}
 
 \subsection{V Dan: Architect Adept}\label{v-dan-architect-adept}~\\
@@ -544,11 +556,12 @@ To attain this rank, the candidate must have demonstrated clear levels of archit
 
 The participant will have been practicing Polkadot as their primary life-focus for at least \textbf{one} year, unbroken, after attaining the previous rank. However, this is only a bare minimum and should not be taken as a presupposition of the expected amount of time required. The candidate should be only be promoted to this grade once the time limit is over \emph{and} they have demonstrated the appropriate aptitude.
 
-\subsubsection{Requirements}\label{requirements-4}
+\subsubsection{Requirements}\label{requirements-5}
 
 \begin{itemize}
-\item Play a primary/sole role in designing \emph{and} implemented a major component.
-\item Usefully assisted in devising (``creating'', ``inventing'', ``incepting'') a major component.
+\item Play a primary role in ideating, designing \emph{and} formalising or prototyping a major component.
+\item Usefully assisted in devising (``creating'', ``inventing'', ``incepting'') three more major components.
+\item Usefully assisted (through advocation, research or rationalisation) in determining the long-term technical roadmap.
 \item At least one published long-form article about technology relevant to but not specifically concerning Polkadot.
 \end{itemize}
 
@@ -566,7 +579,7 @@ This grade is the highest rank to be arrived at through purely technical prowess
 
 The participant will have been practicing Polkadot as their primary life-focus for at least \textbf{one} year, unbroken, after attaining the previous rank. However, this is only a bare minimum and should not be taken as a presupposition of the expected amount of time required. The candidate should be only be promoted to this grade once the time limit is over \emph{and} they have demonstrated the appropriate aptitude.
 
-\subsubsection{Requirements}\label{requirements-5}
+\subsubsection{Requirements}\label{requirements-6}
 
 \begin{itemize}
 \item \emph{Devised}, lead the \emph{design} and overseen (or lead) the implementation of a major protocol innovation.
@@ -596,7 +609,7 @@ Masters need no longer defend their place in the Fellowship. However, promotion 
 
 To attain this rank, the individual \textbf{must} have been practicing Polkadot as their primary life-focus for \textbf{six} years in total, in addition to the demonstrating the administrative, knowledge, intellectual, social and skill-based qualities expected.
 
-\subsubsection{Requirements}\label{requirements-6}
+\subsubsection{Requirements}\label{requirements-7}
 
 \begin{itemize}
 \item Contributed to the broader understanding of the philosophy behind Polkadot during an in-depth conversation. Perhaps through drawing parellels to existing body of literature, perhaps through rational discourse with experts. Should be ready and confident in their ability to explain and defend the newfound understanding.
@@ -620,7 +633,7 @@ This rank indicates a Master with an elevated level of commitment to furthering 
 
 To attain this rank, the individual \textbf{must} have been practicing Polkadot as their primary life-focus for \textbf{eleven} years, as well as fulfilling the social and administrative qualities expected of being in the previous rank.
 
-\subsubsection{Requirements}\label{requirements-7}
+\subsubsection{Requirements}\label{requirements-8}
 
 \begin{itemize}
 \item At least one article considered canonical by masters which further develops the understanding of the philosophical principles underpinning Polkadot.
@@ -641,7 +654,7 @@ Carbonado is a black form of diamond and the hardest mineral known to man. This 
 
 To attain this rank, the individual \textbf{must} have been practicing Polkadot as their primary life-focus for \textbf{nineteen} years, as well as fulfilling the social and administrative qualities expected of being in the previous rank.
 
-\subsubsection{Requirements}\label{requirements-8}
+\subsubsection{Requirements}\label{requirements-9}
 
 \begin{itemize}
 \item Generally recognised as a philosophical, social, artistic, political and/or technological heavyweight outside of blockchain or crypto.
